@@ -1,2 +1,2 @@
 # java4testers
-# This is my ferst project
+# This is my first project
