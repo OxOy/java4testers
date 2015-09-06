@@ -1,6 +1,5 @@
 package com.example.tests;
 
-//import org.junit.*;
 import org.testng.annotations.Test;
 
 public class ALSOGroupCreationTests extends TestBase{
@@ -11,9 +10,9 @@ public class ALSOGroupCreationTests extends TestBase{
 	  gotoGroupsPage();
 	  initGroupCreation();
 	  GroupData group = new GroupData();
-	  group.group_name = "group_1";
-	  group.group_header = "header_1";
-	  group.group_footer = "footer_1";
+	  group.name = "group_1";
+	  group.header = "header_1";
+	  group.footer = "footer_1";
 	  fillGroupForm(group);
 	  submitGroupCreation();
 	  returnToGroupsPage();

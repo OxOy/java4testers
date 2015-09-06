@@ -10,9 +10,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 public class TestBase {
@@ -48,11 +46,11 @@ public class TestBase {
 
 	protected void fillGroupForm(GroupData group) {
 		  driver.findElement(By.name("group_name")).clear();
-		  driver.findElement(By.name("group_name")).sendKeys(group.group_name);
+		  driver.findElement(By.name("group_name")).sendKeys(group.name);
 		  driver.findElement(By.name("group_header")).clear();
-		  driver.findElement(By.name("group_header")).sendKeys(group.group_header);
+		  driver.findElement(By.name("group_header")).sendKeys(group.header);
 		  driver.findElement(By.name("group_footer")).clear();
-		  driver.findElement(By.name("group_footer")).sendKeys(group.group_footer);
+		  driver.findElement(By.name("group_footer")).sendKeys(group.footer);
 	  }
 
 	protected void initGroupCreation() {
