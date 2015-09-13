@@ -12,8 +12,8 @@ public class CommonHelper extends HelperBase{
 		click(By.linkText("home page"));
 	}
 
-	public void submitData() {
-		click(By.name("submit"));
+	public void submitData(String name_button) {
+		click(By.name(name_button));
 	  }
 
 }

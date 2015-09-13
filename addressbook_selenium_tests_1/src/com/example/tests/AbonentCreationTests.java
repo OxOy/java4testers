@@ -23,7 +23,7 @@ public class AbonentCreationTests extends TestBase {
 	  abonent.address_other = "Green street";
 	  abonent.home_other = "777";
 	  app.getAbonentHelper().fillNewAbonentForm(abonent);
-	  app.getCommonHelper().submitData();
+	  app.getCommonHelper().submitData("submit");
 	  app.getCommonHelper().gotoHomepage();
   }
 }

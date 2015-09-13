@@ -30,4 +30,17 @@ public class AbonentHelper extends HelperBase{
 	    type(By.name("address2"),abonent.address_other);
 	    type(By.name("phone2"),abonent.home_other);
 	}
+
+	public void initAbonentModification(int index) {
+		click(By.xpath("(//img[@alt='Edit'])[" + index + "]"));
+	}
+	
+	public void removeOrModification(String action) {
+		click(By.xpath("//input[@name='update'][@value='" + action + "']"));
+	}
+
+	public void deleteAbonent(int index) {
+		initAbonentModification(index);
+		removeOrModification("Delete");
+	}
 }
