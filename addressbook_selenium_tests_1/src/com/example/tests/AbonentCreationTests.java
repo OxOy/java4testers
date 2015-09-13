@@ -3,11 +3,10 @@ package com.example.tests;
 import org.testng.annotations.Test;
 
 public class AbonentCreationTests extends TestBase {
-
   @Test
   public void testNewAbonentCreation() throws Exception {
-	  openMainPage();
-	  initNewAbonent();
+	  app.getNavigationHelper().openMainPage();
+	  app.getAbonentHelper().initNewAbonent();
 	  AbonentData abonent = new AbonentData();
 	  abonent.firstname = "Bob";
 	  abonent.lastname = "Brown";
@@ -23,8 +22,8 @@ public class AbonentCreationTests extends TestBase {
 	  abonent.group = "group_1";
 	  abonent.address_other = "Green street";
 	  abonent.home_other = "777";
-	  fillNewAbonentForm(abonent);
-	  submitData();
-	  gotoHomepage();
+	  app.getAbonentHelper().fillNewAbonentForm(abonent);
+	  app.getCommonHelper().submitData();
+	  app.getCommonHelper().gotoHomepage();
   }
 }
