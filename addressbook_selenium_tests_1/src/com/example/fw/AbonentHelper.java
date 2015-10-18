@@ -1,6 +1,10 @@
 package com.example.fw;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.example.tests.AbonentData;
 
@@ -32,7 +36,7 @@ public class AbonentHelper extends HelperBase{
 	}
 
 	public void initAbonentModification(int index) {
-		click(By.xpath("(//img[@alt='Edit'])[" + index + "]"));
+		click(By.xpath("(//img[@alt='Edit'])[" + (index+1) + "]"));
 	}
 	
 	public void removeOrModification(String action) {
@@ -42,5 +46,20 @@ public class AbonentHelper extends HelperBase{
 	public void deleteAbonent(int index) {
 		initAbonentModification(index);
 		removeOrModification("Delete");
+	}
+
+	public List<AbonentData> getAbonents() {
+		List<AbonentData> abonents = new ArrayList<AbonentData>();
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			AbonentData abonent = new AbonentData();
+			String title = checkbox.getAttribute("title");
+			title = title.substring("Select (".length(), title.length() - ")".length());
+			int index = title.indexOf(" ");
+			abonent.firstname = title.substring(0, index);
+			abonent.lastname = title.substring(index + 1);
+			abonents.add(abonent);
+		}
+		return abonents;
 	}
 }
