@@ -1,20 +1,20 @@
 package com.example.tests;
 
 public class AbonentData implements Comparable<AbonentData> {
-	public String firstname;
-	public String lastname;
-	public String address;
-	public String home;
-	public String mobile;
-	public String work;
-	public String email_first;
-	public String email_second;
-	public String bday;
-	public String bmonth;
-	public String byear;
-	public String group;
-	public String address_other;
-	public String home_other;
+	private String firstname;
+	private String lastname;
+	private String address;
+	private String home;
+	private String mobile;
+	private String work;
+	private String email_first;
+	private String email_second;
+	private String bday;
+	private String bmonth;
+	private String byear;
+	private String group;
+	private String address_other;
+	private String home_other;
 
 	public AbonentData() {
 	}
@@ -81,6 +81,133 @@ public class AbonentData implements Comparable<AbonentData> {
 			i = this.firstname.toLowerCase().compareTo(other.firstname.toLowerCase());
 		}
 		return i;
+	}
+
+	//Вытягивание в цепочку: 4 урок
+	public AbonentData withFirstname(String firstname) {
+		this.firstname = firstname;
+		return this;
+	}
+
+	public AbonentData withLastname(String lastname) {
+		this.lastname = lastname;
+		return this;
+	}
+
+	public AbonentData withAddress(String address) {
+		this.address = address;
+		return this;
+	}
+
+	public AbonentData withHome(String home) {
+		this.home = home;
+		return this;
+	}
+
+	public AbonentData withMobile(String mobile) {
+		this.mobile = mobile;
+		return this;
+	}
+
+	public AbonentData withWork(String work) {
+		this.work = work;
+		return this;
+	}
+
+	public AbonentData withEmailFirst(String email_first) {
+		this.email_first = email_first;
+		return this;
+	}
+
+	public AbonentData withEmailSecond(String email_second) {
+		this.email_second = email_second;
+		return this;
+	}
+
+	public AbonentData withBday(String bday) {
+		this.bday = bday;
+		return this;
+	}
+
+	public AbonentData withBmonth(String bmonth) {
+		this.bmonth = bmonth;
+		return this;
+	}
+
+	public AbonentData withByear(String byear) {
+		this.byear = byear;
+		return this;
+	}
+
+	public AbonentData withGroup(String group) {
+		this.group = group;
+		return this;
+	}
+
+	public AbonentData withAddressOther(String address_other) {
+		this.address_other = address_other;
+		return this;
+	}
+
+	public AbonentData withHomeOther(String home_other) {
+		this.home_other = home_other;
+		return this;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public String getHome() {
+		return home;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public String getWork() {
+		return work;
+	}
+
+	public String getEmail_first() {
+		return email_first;
+	}
+
+	public String getEmail_second() {
+		return email_second;
+	}
+
+	public String getBday() {
+		return bday;
+	}
+
+	public String getBmonth() {
+		return bmonth;
+	}
+
+	public String getByear() {
+		return byear;
+	}
+
+	public String getGroup() {
+		return group;
+	}
+
+	public String getAddress_other() {
+		return address_other;
+	}
+
+	public String getHome_other() {
+		return home_other;
 	}
 	
 	

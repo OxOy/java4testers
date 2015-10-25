@@ -34,10 +34,10 @@ public class TestBase {
 	  public Iterator<Object[]> randomValidGroupGenerator() {
 		  List<Object[]> list = new ArrayList<Object[]>();
 		  for (int i = 0; i < 5; i++) {
-			GroupData group = new GroupData();
-			group.name = generateRandomString("group","");
-			group.header = generateRandomString("group","");
-			group.footer = generateRandomString("group","");
+			GroupData group = new GroupData()
+					.withName(generateRandomString("group",""))
+					.withHeader(generateRandomString("group",""))
+					.withFooter(generateRandomString("group",""));
 			list.add(new Object[]{group});
 		  }
 		  return list.iterator();
@@ -47,21 +47,21 @@ public class TestBase {
 	  public Iterator<Object[]> randomValidAbonentGenerator(){
 		  List<Object[]> list = new ArrayList<Object[]>();
 		  for (int i = 0; i < 5; i++) {
-			AbonentData abonent = new AbonentData();
-			abonent.firstname = generateRandomString("abonent","firstname");
-			abonent.lastname = generateRandomString("abonent","lastname");
-			abonent.address = generateRandomString("abonent","address");
-			abonent.home = generateRandomString("abonent","phone");
-			abonent.mobile = generateRandomString("abonent","phone");
-			abonent.work = generateRandomString("abonent","phone");
-			abonent.email_first = generateRandomString("abonent","mail");
-			abonent.email_second = generateRandomString("abonent","mail");
-			abonent.bday = generateRandomString("abonent","bday");
-			abonent.bmonth = generateRandomString("abonent","bmonth");
-			abonent.byear = generateRandomString("abonent","byear");
-			abonent.group = generateRandomString("abonent","group");
-			abonent.address_other = generateRandomString("abonent","address");
-			abonent.home_other = generateRandomString("abonent","phone");
+			AbonentData abonent = new AbonentData()
+					.withFirstname(generateRandomString("abonent","firstname"))
+					.withLastname(generateRandomString("abonent","lastname"))
+					.withAddress(generateRandomString("abonent","address"))
+					.withHome(generateRandomString("abonent","phone"))
+					.withMobile(generateRandomString("abonent","phone"))
+					.withWork(generateRandomString("abonent","phone"))
+					.withEmailFirst(generateRandomString("abonent","mail"))
+					.withEmailSecond(generateRandomString("abonent","mail"))
+					.withBday(generateRandomString("abonent","bday"))
+					.withBmonth(generateRandomString("abonent","bmonth"))
+					.withByear(generateRandomString("abonent","byear"))
+					.withGroup(generateRandomString("abonent","group"))
+					.withAddressOther(generateRandomString("abonent","address"))
+					.withHomeOther(generateRandomString("abonent","phone"));
 			list.add(new Object[]{abonent});
 		  }
 		  return list.iterator();
