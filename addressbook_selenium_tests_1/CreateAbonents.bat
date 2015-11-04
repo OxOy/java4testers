@@ -1,2 +1,2 @@
-java -cp bin;E:\“—…ˆ…_JAVA\program\library_for_java_project\xstream-1.4.8\lib\xstream-1.4.8.jar;E:\“—…ˆ…_JAVA\program\library_for_java_project\xstream-1.4.8\lib\xstream\xpp3_min-1.1.4c.jar;E:\“—…ˆ…_JAVA\program\library_for_java_project\xstream-1.4.8\lib\xstream\xmlpull-1.1.3.1.jar;E:\“—…ˆ…_JAVA\program\library_for_java_project\selenium-server-standalone-2.47.1.jar org.testng.TestNG AbonentCreation_testng-customsuite.xml
-#OEM-866(DOC)
+java -cp bin;E:\“—…ˆ…_JAVA\program\library_for_java_project\xstream-1.4.8\lib\xstream-1.4.8.jar;E:\“—…ˆ…_JAVA\program\library_for_java_project\xstream-1.4.8\lib\xstream\xpp3_min-1.1.4c.jar;E:\“—…ˆ…_JAVA\program\library_for_java_project\xstream-1.4.8\lib\xstream\xmlpull-1.1.3.1.jar;E:\“—…ˆ…_JAVA\program\library_for_java_project\selenium-server-standalone-2.47.1.jar -DconfigFile=firefox.properties org.testng.TestNG AbonentCreation_testng-customsuite.xml
+rem OEM-866(DOS)
